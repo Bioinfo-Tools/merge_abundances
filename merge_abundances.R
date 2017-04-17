@@ -19,4 +19,6 @@ for(i in 2:length(args)){
 }
 merged_table[is.na(merged_table)] <- 0
 names(merged_table)[2:(length(args)+1)] <- args
-print(merged_table)
+
+
+write.table(file="merged_results.txt",merged_table, quote=FALSE, sep="\t", row.names=FALSE, col.names=TRUE)
